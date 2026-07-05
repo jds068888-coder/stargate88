@@ -126,14 +126,14 @@ npm run dev
 
 ## 📊 Project Status
 
-| 구성 요소                       | 상태                           |
-| ------------------------------- | ------------------------------ |
-| GitHub 저장소                   | ✅ 활성                        |
-| README · 저장소 메타            | ✅ 정비됨                      |
-| 애플리케이션 스캐폴딩 (Next.js) | ✅ 완료                        |
-| CI (lint · typecheck · build)   | ✅ 완료 (GitHub Actions)       |
-| Supabase 연동                   | 🟡 코드 준비 완료, 실연결 대기 |
-| Vercel 배포                     | ⬜ 대기 (프로젝트 연결 필요)   |
+| 구성 요소                       | 상태                         |
+| ------------------------------- | ---------------------------- |
+| GitHub 저장소                   | ✅ 활성                      |
+| README · 저장소 메타            | ✅ 정비됨                    |
+| 애플리케이션 스캐폴딩 (Next.js) | ✅ 완료                      |
+| CI (lint · typecheck · build)   | ✅ 완료 (GitHub Actions)     |
+| Supabase 연동                   | ✅ 활성화·연결 완료          |
+| Vercel 배포                     | ⬜ 대기 (프로젝트 연결 필요) |
 
 ---
 
@@ -146,7 +146,7 @@ npm run dev
 - **Phase 3 — 서비스 연동** 🟡 진행 중
   - ✅ GitHub Actions CI (lint · typecheck · format · build)
   - ✅ Supabase 서버/클라이언트 연동 코드 + `/api/health` 헬스체크
-  - ⬜ Supabase 프로젝트 활성화·실키 연결
+  - ✅ Supabase 프로젝트 활성화·실키 연결 (`/api/health` → `configured` 확인)
   - ⬜ Vercel 프로젝트 연결·자동 배포
 
 ---
