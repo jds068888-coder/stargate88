@@ -124,16 +124,38 @@ npm run dev
 
 ---
 
+## ☁️ Deployment (Vercel)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/jds068888-coder/stargate88)
+
+**최초 1회 설정 (Vercel 대시보드)**
+
+1. [Vercel](https://vercel.com/new) 에서 이 GitHub 저장소를 Import 합니다.
+2. Framework Preset: **Next.js** (자동 감지, `vercel.json` 포함).
+3. **Environment Variables** 에 아래 값을 등록합니다.
+
+   | 변수                            | 노출 범위  | 값                                                 |
+   | ------------------------------- | ---------- | -------------------------------------------------- |
+   | `NEXT_PUBLIC_SUPABASE_URL`      | 클라이언트 | `https://inftexpcnfinglwlrvsj.supabase.co`         |
+   | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | 클라이언트 | Supabase 대시보드 > Settings > API 의 publishable  |
+   | `SUPABASE_SERVICE_ROLE_KEY`     | 서버 전용  | Supabase 대시보드 > Settings > API 의 service_role |
+
+4. Deploy 후, `main` 브랜치에 push하면 프로덕션 자동 배포됩니다.
+
+> 배포 확인: `https://<배포도메인>/api/health` → `{"status":"ok","supabase":"configured"}`
+
+---
+
 ## 📊 Project Status
 
-| 구성 요소                       | 상태                         |
-| ------------------------------- | ---------------------------- |
-| GitHub 저장소                   | ✅ 활성                      |
-| README · 저장소 메타            | ✅ 정비됨                    |
-| 애플리케이션 스캐폴딩 (Next.js) | ✅ 완료                      |
-| CI (lint · typecheck · build)   | ✅ 완료 (GitHub Actions)     |
-| Supabase 연동                   | ✅ 활성화·연결 완료          |
-| Vercel 배포                     | ⬜ 대기 (프로젝트 연결 필요) |
+| 구성 요소                       | 상태                                |
+| ------------------------------- | ----------------------------------- |
+| GitHub 저장소                   | ✅ 활성                             |
+| README · 저장소 메타            | ✅ 정비됨                           |
+| 애플리케이션 스캐폴딩 (Next.js) | ✅ 완료                             |
+| CI (lint · typecheck · build)   | ✅ 완료 (GitHub Actions)            |
+| Supabase 연동                   | ✅ 활성화·연결 완료                 |
+| Vercel 배포                     | 🟡 설정·가이드 완료, 계정 연결 대기 |
 
 ---
 
@@ -147,7 +169,7 @@ npm run dev
   - ✅ GitHub Actions CI (lint · typecheck · format · build)
   - ✅ Supabase 서버/클라이언트 연동 코드 + `/api/health` 헬스체크
   - ✅ Supabase 프로젝트 활성화·실키 연결 (`/api/health` → `configured` 확인)
-  - ⬜ Vercel 프로젝트 연결·자동 배포
+  - 🟡 Vercel 배포 설정(`vercel.json`)·가이드 완료 — 대시보드 계정 연결만 남음
 
 ---
 
